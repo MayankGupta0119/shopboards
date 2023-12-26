@@ -1,0 +1,5 @@
+total item in cart is fetched form state
+Navbar is in both window i.e. the card and shopping cart,therefore putting it into app js file
+
+App.js-> Navbar -> routes : 1. home
+                            2. cart
