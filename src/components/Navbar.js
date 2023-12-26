@@ -23,14 +23,18 @@ const Navbar = () => {
             <div className="w-full">
               {cart.length > 0 ? (
                 <div className="relative">
-                  <span className=" absolute -top-3 left-2 text-sm rounded-full w-5 h-5 animate-bounce bg-green-500
-                  ">
+                  <span
+                    className=" absolute -top-3 left-2 text-sm rounded-full w-5 h-5 animate-bounce bg-green-500
+                  "
+                  >
                     {cart.length}
                   </span>
                   <FaCartShopping className="" />
                 </div>
               ) : (
-                <p></p>
+                <NavLink to="/cart">
+                  <FaCartShopping className="" />
+                </NavLink>
               )}
             </div>
           </NavLink>

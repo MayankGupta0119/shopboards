@@ -25,7 +25,7 @@ const Cart = () => {
         <div className="flex justify-between items-center">
           <div className="flex flex-col w-[55%]">
             {cart.map((post, index) => (
-              <CartItem  key={post.id} post={post} index={index} />
+              <CartItem key={post.id} post={post} index={index} />
             ))}
           </div>
           <div className="zoomInUp w-[43%] h-[5rem] ml-[3rem] fixed top-24 right-0">
@@ -45,7 +45,9 @@ const Cart = () => {
                 <p>
                   <span className="font-semibold text-xl">Total Amount : </span>
                   {/* toLocalString is used to format decimals */}
-                  <span className="font-bold text-xl num">$ {totalAmount.toLocaleString()}</span>{" "}
+                  <span className="font-bold text-xl num">
+                    $ {totalAmount.toLocaleString()}
+                  </span>{" "}
                 </p>
                 <button className="checkoutbtn mt-3">Checkout Now</button>
               </div>
@@ -53,10 +55,12 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="flex justify-center items-center w-full h-full">
-          <h1>Cart Empty</h1>
+        <div className="flex flex-col justify-center items-center w-screen h-screen gap-5">
+          <h1 className="text-xl font-semibold">Cart Empty</h1>
           <NavLink to="/">
-            <button>Shop Now</button>
+            <button className="checkoutbtn text-xl font-semibold ">
+              Shop Now
+            </button>
           </NavLink>
         </div>
       )}
